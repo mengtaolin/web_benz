@@ -4,8 +4,9 @@
 $(function init(){
     $.get('config/cars.txt').success(function(content){
         initDatas(content);
+        putDatas();
     });
-    putDatas();
+
 })
 
 function initDatas(content){
@@ -20,7 +21,6 @@ function initDatas(content){
             namesList[index] = array;
             index ++;
         }
-        console.log(namesList[0][1])
     }
 }
 
@@ -37,6 +37,6 @@ function synName(sourceList){
 }
 
 function putDatas(){
-    var htmlData = "<p>doIt</p>"
-    $("#tabs-1").find("p").html(htmlData);
+    //var htmlData = "<p>doIt</p>"
+    //$("#tabs-1").find("p").html(htmlData);
 }
