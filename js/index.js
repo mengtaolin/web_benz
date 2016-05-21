@@ -4,7 +4,11 @@
 $(function init(){
     $.get('config/cars.txt').success(function(content){
         initDatas(content);
+        loadConfigs();
+
         putDatas();
+
+
     });
 
 })
@@ -35,6 +39,17 @@ function synName(sourceList){
     }
     return namesList;
 }
+
+function loadConfigs(){
+    $.get('config/cars_detail.txt').success(function(details){
+        initDetails(details);
+    });
+
+    function initDetails(details){
+        console.log(details);
+    }
+}
+
 
 function putDatas(){
     //var htmlData = "<p>doIt</p>"
